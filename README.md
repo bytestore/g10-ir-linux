@@ -42,3 +42,5 @@ If you don't want to program the button, just leave ```00``` instead of the IR c
 > https://fcc.report/FCC-ID/OZ5C009/5122343.pdf  
 > https://manuals.plus/ohsung-electronics/c009-rf-remote-control-unit-manual  
 > https://android.googlesource.com/platform/hardware/telink/atv/refDesignRcu
+
+![Homatics B21](/assets/images/homatics_b21.jpg)
