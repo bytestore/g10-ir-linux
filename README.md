@@ -12,6 +12,7 @@ pair E8:DF:24:50:C1:E4
 trust E8:DF:24:50:C1:E4
 connect E8:DF:24:50:C1:E4
 ```
+Install dbus python library ```pip install dbus-next```   
 Run script ```/usr/bin/python3 /usr/local/bin/g10-ir-linux.py E8:DF:24:50:C1:E4```   
 
 This script uses d-bus, which allows the remote to keep BT connection after programming.   
