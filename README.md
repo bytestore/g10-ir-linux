@@ -2,8 +2,7 @@
 ## (Google G10, Homatics B21, etc.)
 Based on [Genius1237/g10-ir](https://github.com/Genius1237/g10-ir)
 
-You need to pair remote with you linux (press BACK + HOME on the remote) and pair remote via bluetoothctl
-
+You need to pair remote with you linux (press BACK + HOME on the remote) and pair remote via bluetoothctl. Replace MAC to your remote MAC   
 ```
 bluetoothctl
 scan on
@@ -13,6 +12,7 @@ pair E8:DF:24:50:C1:E4
 trust E8:DF:24:50:C1:E4
 connect E8:DF:24:50:C1:E4
 ```
+Run script ```/usr/bin/python3 /usr/local/bin/g10-ir-linux.py E8:DF:24:50:C1:E4```   
 
 This script uses d-bus, which allows the remote to keep BT connection after programming.   
 
@@ -34,7 +34,7 @@ If you don't want to program the button, just leave ```00``` instead of the IR c
 > 1. Place python script into ```/usr/local/bin/g10-ir-linux.py```   
 > 2. Create file ```/etc/udev/rules.d/99-b21.rules```   
 > ```ACTION=="add" SUBSYSTEM=="input", ATTR{name}=="B21 Keyboard", RUN+="/usr/bin/python3 /usr/local/bin/g10-ir-linux.py E8:DF:24:50:C1:E4"```   
-> 3. Change "B21 Keyboard" to you remote name, you can see name in dmesg when you reconnect remote   
+> 3. Change "B21 Keyboard" to you remote name and MAC to you remote MAC, you can see name in dmesg when you reconnect remote   
 > 4. Reload udev ```udevadm control --reload```
 
 **References**
