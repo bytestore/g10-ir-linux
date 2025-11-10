@@ -29,14 +29,14 @@ My power button code modified   ```0221017c0020123c000a0046000a001e000a001e000a0
 
 > [!NOTE]
 > The remote deletes the IR codes after each pairing, so you need to programming remote each paring.   
-> Place python script into ```/usr/local/bin/g10-ir-linux.py```   
-> Create file ```/etc/udev/rules.d/99-b21.rules```   
+> 1. Place python script into ```/usr/local/bin/g10-ir-linux.py```   
+> 2. Create file ```/etc/udev/rules.d/99-b21.rules```   
 > ```ACTION=="add" SUBSYSTEM=="input", ATTR{name}=="B21 Keyboard", RUN+="/usr/bin/python3 /usr/local/bin/g10-ir-linux.py E8:DF:24:50:C1:E4"```   
-> Change "B21 Keyboard" to you remote name, you can see name in dmesg when you reconnect remote 
-> Reload udev ```udevadm control --reload```
+> 3. Change "B21 Keyboard" to you remote name, you can see name in dmesg when you reconnect remote   
+> 4. Reload udev ```udevadm control --reload```
 
 **References**
-> [Other IR codes for devices on remotecentral.com](https://www.remotecentral.com/cgi-bin/codes/)
+> [Other IR codes for devices on remotecentral.com](https://www.remotecentral.com/cgi-bin/codes/)   
 > https://fcc.report/FCC-ID/OZ5C009/5122343.pdf  
 > https://manuals.plus/ohsung-electronics/c009-rf-remote-control-unit-manual  
 > https://android.googlesource.com/platform/hardware/telink/atv/refDesignRcu
