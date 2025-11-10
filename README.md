@@ -1,4 +1,4 @@
-# Linux BLE Tool for Programming IR Buttons on TLSR827x Remotes
+# Linux D-BUS BLE Tool for Programming IR Buttons on TLSR827x Remotes
 ## (Google G10, Homatics B21, etc.)
 Based on [Genius1237/g10-ir](https://github.com/Genius1237/g10-ir)
 
